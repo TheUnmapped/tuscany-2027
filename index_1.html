@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tuscany 2027 Escape | The Unmapped</title>
+
+<!-- META DOMAIN VERIFICATION: paste the facebook-domain-verification meta tag here (landing page only) -->
+<!-- ==== META PIXEL: replace YOUR_PIXEL_ID (2 places) with your Pixel ID ==== -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"></noscript>
+<!-- ==== END META PIXEL ==== -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: photo-led editorial funnel; alternating paper and wine-dark bands, one centered column of ~68ch */
+:root{
+  --paper:#FBF8F4; --paper-alt:#F4ECE6; --ink:#2B1519; --ink-deep:#1B0C0F;
+  --wine:#8C1C30; --wine-hover:#A3233A; --blush:#D878A3; --muted:#6E5A5C; --line:#E4D8D2;
+  --on-dark:#FBF4EF; --on-dark-soft:rgba(251,244,239,.78);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:20px}
+.narrow{max-width:700px;margin-inline:auto;padding-inline:20px}
+.band{padding-block:88px}
+.band.paper{background:var(--paper)} .band.alt{background:var(--paper-alt)}
+.band.ink{background:var(--ink);color:var(--on-dark)} .band.deep{background:var(--ink-deep);color:var(--on-dark)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.ink .eyebrow,.deep .eyebrow,.hero .eyebrow{color:var(--blush)}
+.h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,44px);line-height:1.12;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+.ink .lead,.deep .lead{color:var(--on-dark-soft)}
+.stack{display:flex;flex-direction:column;gap:18px}
+.center{text-align:center;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--wine);color:#fff;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:17px 30px;border-radius:2px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--wine-hover);transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:22px 24px}
+.mark{font-family:var(--display);font-style:italic;font-size:24px;color:#fff;text-decoration:none;letter-spacing:.01em}
+.mark span{color:var(--blush)}
+.ghost{color:#fff;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);padding:11px 18px;border-radius:2px}
+.ghost:hover{background:rgba(255,255,255,.1)}
+
+/* hero */
+.hero{position:relative;color:#fff;text-align:center;padding:150px 0 80px;
+  background:linear-gradient(180deg,rgba(27,12,15,.72),rgba(27,12,15,.55) 45%,rgba(27,12,15,.85)),url("https://theunmapped.net/wp-content/uploads/2026/04/1451308124_vip_supertuscan_wine_tour.jpg") center/cover no-repeat,var(--ink-deep)}
+.hero .facts{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft)}
+.hero .facts i{font-style:normal;color:var(--blush)}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(38px,7vw,74px);line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin-top:26px}
+.hero h1 em{display:block;text-transform:none;font-style:italic;font-weight:400;font-size:.62em;letter-spacing:0;margin-top:10px;color:#F6DCE7}
+.hero p.intro{max-width:620px;margin:26px auto 0;font-size:18px;color:var(--on-dark-soft)}
+.count{display:flex;justify-content:center;margin:40px auto 10px;max-width:460px}
+.count div{flex:1;padding:0 10px;border-left:1px solid rgba(255,255,255,.25)}
+.count div:first-child{border-left:0}
+.count b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(30px,6vw,46px);line-height:1;font-variant-numeric:tabular-nums}
+.count small{display:block;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark-soft)}
+.count-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft);margin-bottom:34px}
+
+/* ticker */
+.ticker{background:var(--ink);color:var(--on-dark);overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.08)}
+.ticker .track{display:inline-flex;gap:36px;padding:16px 0;animation:tick 42s linear infinite}
+.ticker span{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.ticker span::after{content:"\2726";margin-left:36px;color:var(--blush)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* photo divider */
+.divider{position:relative;min-height:340px;display:flex;align-items:flex-end;padding:28px 24px;
+  background:linear-gradient(180deg,rgba(27,12,15,0) 40%,rgba(27,12,15,.75)),url("https://theunmapped.net/wp-content/uploads/2026/04/1451308124_vip_supertuscan_wine_tour.jpg") center 65%/cover no-repeat,var(--ink)}
+.divider p{font-family:var(--display);font-style:italic;font-size:clamp(20px,3vw,28px);color:#fff;max-width:1080px;margin-inline:auto;width:100%}
+
+/* survey / embed slots */
+.slot{border:1px dashed var(--line);background:#fff;border-radius:4px;padding:34px 22px;text-align:center;color:var(--muted);font-size:15px;width:100%}
+.slot strong{display:block;font-family:var(--display);font-weight:500;font-size:20px;color:var(--ink);margin-bottom:6px}
+.slot .demo{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.slot .demo a{font-size:13px;font-weight:600;color:var(--wine);border:1px solid var(--line);padding:9px 14px;border-radius:2px;text-decoration:none}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font-size:14px;color:var(--muted)}
+.trust b{color:var(--ink);font-weight:600}
+
+/* reasons */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:rgba(251,244,239,.14);margin-top:52px;border:1px solid rgba(251,244,239,.14)}
+.reason{background:var(--ink);padding:34px 28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.reason .n{font-family:var(--display);font-style:italic;font-size:30px;color:var(--blush)}
+.reason h3{font-size:18px;font-weight:600;color:var(--on-dark)}
+.reason p{font-size:16px;color:var(--on-dark-soft)}
+
+/* villas */
+.villas{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-top:48px}
+.villa{background:#fff;border:1px solid var(--line);padding:34px 30px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.villa .tag{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.villa h3{font-family:var(--display);font-weight:500;font-size:30px}
+.price{font-family:var(--display);font-size:44px;font-weight:500;line-height:1;color:var(--wine);font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-size:14px;color:var(--muted);font-weight:500;margin-left:6px}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.ticks li{padding-left:26px;position:relative;font-size:16px}
+.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:12px;height:6px;border-left:2px solid var(--wine);border-bottom:2px solid var(--wine);transform:translateY(-60%) rotate(-45deg)}
+.ticks.no li::before{border:0;width:10px;height:2px;background:var(--muted);transform:none;top:.8em}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:36px;margin-top:52px}
+.twocol h3{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.note{margin-top:40px;padding:22px 24px;border-left:3px solid var(--wine);background:#fff;font-size:16px}
+.note b{font-weight:600}
+
+/* itinerary */
+.days{list-style:none;margin:52px 0 0;padding:0;display:flex;flex-direction:column}
+.day{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.day:last-child{border-bottom:1px solid var(--line)}
+.day .when{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);padding-top:6px}
+.day .when b{display:block;font-family:var(--display);font-size:34px;font-weight:500;letter-spacing:0;color:var(--ink);line-height:1;margin-bottom:6px}
+.day h3{font-family:var(--display);font-weight:500;font-size:24px;margin-bottom:6px}
+.day p{color:var(--muted);font-size:16px;max-width:60ch}
+@media (max-width:540px){.day{grid-template-columns:1fr;gap:8px}.day .when b{display:inline;font-size:24px;margin-right:8px}}
+
+/* signature */
+.sig{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:52px}
+.sig article{border-top:2px solid var(--blush);padding-top:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.sig h3{font-family:var(--display);font-weight:500;font-size:24px;color:var(--on-dark)}
+.sig p{color:var(--on-dark-soft);font-size:16px}
+
+/* faq */
+.faq{margin-top:44px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-weight:600;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:26px;line-height:1;color:var(--wine);flex-shrink:0}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:62ch}
+
+/* closing */
+.closing{position:relative;text-align:center;color:#fff;padding-block:120px;
+  background:linear-gradient(180deg,rgba(27,12,15,.78),rgba(27,12,15,.82)),url("https://theunmapped.net/wp-content/uploads/2026/04/1451308124_vip_supertuscan_wine_tour.jpg") center 30%/cover no-repeat,var(--ink-deep)}
+.closing .h2{color:#fff}
+
+/* footer */
+.foot{background:var(--ink-deep);color:var(--on-dark-soft);text-align:center;padding:56px 20px;font-size:14px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.foot .mark{font-size:28px}
+.foot a{color:var(--on-dark);text-decoration:none}
+.foot .fine{max-width:620px;font-size:13px;opacity:.75}
+
+/* simple pages (schedule / thanks / not-a-fit) */
+.simple-top{background:var(--ink-deep);padding:22px 24px;display:flex;justify-content:center}
+.banner{min-height:240px;background:linear-gradient(180deg,rgba(27,12,15,.25),rgba(27,12,15,.6)),url("https://theunmapped.net/wp-content/uploads/2026/04/1451308124_vip_supertuscan_wine_tour.jpg") center 60%/cover no-repeat,var(--ink)}
+.page{padding-block:64px 80px}
+.step{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);border:1px solid var(--line);padding:7px 12px;border-radius:2px;background:#fff}
+.page h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,5.6vw,52px);line-height:1.08}
+.steps{list-style:none;margin:40px 0 0;padding:0;display:flex;flex-direction:column;gap:28px;text-align:left}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:18px}
+.steps .roman{font-family:var(--display);font-style:italic;font-size:30px;color:var(--wine);line-height:1}
+.steps h3{font-size:18px;font-weight:600;margin-bottom:4px}
+.steps p{color:var(--muted)}
+.refline{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:16px}
+.refline a{color:var(--wine);font-weight:600}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}.btn{transition:none}html{scroll-behavior:auto}}
+@media (max-width:600px){.band{padding-block:64px}.hero{padding-top:120px}.top{padding:16px}.mark{font-size:20px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="https://theunmapped.net/">The <span>Unmapped</span></a>
+  <a class="ghost" href="#inquire">Inquire</a>
+</header>
+
+<section class="hero">
+  <div class="narrow">
+    <div class="facts"><span>May 22–29, 2027</span><i>•</i><span>Chianti, Tuscany</span><i>•</i><span>Only 10 spots</span></div>
+    <h1>Eight days in Tuscany<em>with your best friends</em></h1>
+    <p class="intro">Stay in a private villa in the hills of Chianti. Taste wine right where it is made. Cook, laugh, and eat together every night. Your villa, breakfasts, tours, and rides are all part of the price. You just book your flight.</p>
+    <div class="count" role="timer" aria-label="Countdown to departure">
+      <div><b id="cd-d">0</b><small>Days</small></div>
+      <div><b id="cd-h">00</b><small>Hours</small></div>
+      <div><b id="cd-m">00</b><small>Minutes</small></div>
+      <div><b id="cd-s">00</b><small>Seconds</small></div>
+    </div>
+    <p class="count-label">Until we arrive in Tuscany</p>
+    <a class="btn" href="#inquire">Ask about this trip &rarr;</a>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track"><span>8 days, 7 nights</span><span>Private villa in Chianti</span><span>Wine tastings and a cooking class</span><span>May 22–29, 2027</span><span>Only 10 spots</span><span>Hosted by Ronda in person</span><span>8 days, 7 nights</span><span>Private villa in Chianti</span><span>Wine tastings and a cooking class</span><span>May 22–29, 2027</span><span>Only 10 spots</span><span>Hosted by Ronda in person</span></div></div>
+
+<div class="divider"><p>One villa. Ten friends. Eight sunny days in wine country.</p></div>
+
+<section class="band paper" id="inquire">
+  <div class="narrow stack center">
+    <span class="eyebrow">Step 1 of 2</span>
+    <h2 class="h2">See if this trip is right for you</h2>
+    <p class="lead">Answer a few quick questions. It takes about two minutes. Then you can pick a time for a free call with Ronda. There is no cost and no pressure.</p>
+    <!-- ==== PASTE YOUR GHL SURVEY EMBED CODE BELOW (replace this whole div) ==== -->
+<div class="slot"><strong>Survey loading…</strong>Paste your GHL survey embed code here.</div>
+<!-- ==== END SURVEY ==== -->
+    <div class="trust"><span><b>Hosted in person</b> by Ronda Walker</span><span><b>Planned with Travelive</b>, a luxury travel partner in Italy</span></div>
+  </div>
+</section>
+
+<section class="band ink">
+  <div class="wrap">
+    <div class="stack" style="max-width:700px">
+      <span class="eyebrow">Why this trip</span>
+      <h2 class="h2">Four reasons friends say yes</h2>
+    </div>
+    <div class="grid4">
+      <div class="reason"><span class="n">01</span><h3>Your own private villa</h3><p>No hotel halls and no strangers. You share a big house with a pool, a full kitchen, and views of the vines.</p></div>
+      <div class="reason"><span class="n">02</span><h3>A small group of 10</h3><p>No big tour buses. Just you and your friends, with time to slow down and enjoy each day.</p></div>
+      <div class="reason"><span class="n">03</span><h3>Wine at the source</h3><p>Taste Chianti in Chianti. Visit wineries, try local olive oil, and sip eight wines on a day in Val d'Orcia.</p></div>
+      <div class="reason"><span class="n">04</span><h3>A host who handles it</h3><p>Ronda is with you the whole trip. She takes care of the plans, so you can relax and have fun.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <div class="stack" style="max-width:700px">
+      <span class="eyebrow">Villas and price</span>
+      <h2 class="h2">Pick your villa</h2>
+      <p class="lead">Both villas get the same eight-day trip. The only difference is the house you come home to each night.</p>
+    </div>
+    <div class="villas">
+      <div class="villa">
+        <span class="tag">Option one</span>
+        <h3>Villa Beltrude</h3>
+        <div class="price">$4,500<small>per person</small></div>
+        <ul class="ticks">
+          <li>6 bedrooms, about 25 km from Florence</li>
+          <li>Plunge pool and wellness area</li>
+          <li>Garden and outdoor dining terraces</li>
+          <li>Full kitchens for supper club nights</li>
+        </ul>
+      </div>
+      <div class="villa">
+        <span class="tag">Option two</span>
+        <h3>Villa Jobaldo</h3>
+        <div class="price">$5,900<small>per person</small></div>
+        <ul class="ticks">
+          <li>7 bedrooms in Panzano in Chianti</li>
+          <li>Private 20-acre estate</li>
+          <li>Pool and wide terrace with views</li>
+          <li>Modern rooms and kitchen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="twocol">
+      <div>
+        <h3>What is included</h3>
+        <ul class="ticks">
+          <li>7 nights in your private villa</li>
+          <li>Breakfast every day</li>
+          <li>Private rides to and from Florence airport</li>
+          <li>San Gimignano and Chianti day with lunch and wine</li>
+          <li>Cooking class with lunch and wine</li>
+          <li>Val d'Orcia day with lunch and an eight-wine tasting</li>
+          <li>Private photo shoot at the villa</li>
+          <li>Private drivers, guides, and Ronda as your host</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What is not included</h3>
+        <ul class="ticks no">
+          <li>Flights</li>
+          <li>Meals not listed in the plan</li>
+          <li>Local tourist tax, paid at the villa</li>
+          <li>Tips</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note"><b>Good to know:</b> Book by the first week of January 2027. Final payment is due March 31, 2027. There are only 10 spots, and they go in the order people book.</p>
+    <div style="margin-top:36px"><a class="btn" href="#inquire">Ask about this trip &rarr;</a></div>
+  </div>
+</section>
+
+<section class="band paper">
+  <div class="wrap">
+    <div class="stack" style="max-width:700px">
+      <span class="eyebrow">The plan</span>
+      <h2 class="h2">Your eight days, day by day</h2>
+    </div>
+    <ol class="days">
+      <li class="day"><div class="when"><b>1</b>Sat, May 22</div><div><h3>Welcome to Chianti</h3><p>A private driver picks you up at Florence airport and takes you to the villa. Settle in, then join the welcome dinner.</p></div></li>
+      <li class="day"><div class="when"><b>2</b>Sun, May 23</div><div><h3>San Gimignano and a winery</h3><p>Explore a famous hilltop town. Then enjoy a country lunch with wine and olive oil tasting, and tour a winery.</p></div></li>
+      <li class="day"><div class="when"><b>3</b>Mon, May 24</div><div><h3>Villa day</h3><p>Sleep in. Swim in the pool. Read in the sun. Tonight, a guest chef from the group cooks dinner.</p></div></li>
+      <li class="day"><div class="when"><b>4</b>Tue, May 25</div><div><h3>Cooking class</h3><p>Learn to cook Italian food near the old Badia a Passignano abbey. Then eat what you made, with wine.</p></div></li>
+      <li class="day"><div class="when"><b>5</b>Wed, May 26</div><div><h3>Free day</h3><p>Rest at the villa or visit the little villages nearby. You choose.</p></div></li>
+      <li class="day"><div class="when"><b>6</b>Thu, May 27</div><div><h3>Val d'Orcia wine day</h3><p>Ride through Montepulciano, Pienza, and Montalcino. Visit Avignonesi Winery for a big lunch and eight wines.</p></div></li>
+      <li class="day"><div class="when"><b>7</b>Fri, May 28</div><div><h3>Photo shoot and farewell</h3><p>A pro photographer spends two hours with the group at the villa. Then share one last dinner together.</p></div></li>
+      <li class="day"><div class="when"><b>8</b>Sat, May 29</div><div><h3>Arrivederci</h3><p>A private driver takes you back to Florence airport.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band deep">
+  <div class="wrap">
+    <div class="stack" style="max-width:700px">
+      <span class="eyebrow">Only on this trip</span>
+      <h2 class="h2">Three things you will never forget</h2>
+    </div>
+    <div class="sig">
+      <article><h3>The Villa Supper Club</h3><p>Each pair or small group picks one night to cook a favorite Italian dish for everyone. Other nights are light suppers. You choose your night after you book.</p></article>
+      <article><h3>A day of great wine</h3><p>Drive through some of the prettiest hills in Italy. Then sit down for lunch and taste eight wines at a well-known winery.</p></article>
+      <article><h3>Your own photo shoot</h3><p>A pro photographer captures your group at the villa. You go home with real photos of the trip, not just phone selfies.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band paper">
+  <div class="narrow">
+    <div class="stack">
+      <span class="eyebrow">Questions</span>
+      <h2 class="h2">Things people ask</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Who is this trip for?</summary><p>It is for friends who want to relax, eat well, and drink good wine together. If you love good food and slow days in the sun, you will love this trip.</p></details>
+      <details><summary>How much does it cost?</summary><p>Villa Beltrude is $4,500 per person. Villa Jobaldo is $5,900 per person. Both prices are based on 10 guests sharing the villa.</p></details>
+      <details><summary>Are flights included?</summary><p>No. You book your own flight into Florence. Once you land, a private driver takes you to the villa, and back to the airport at the end.</p></details>
+      <details><summary>Do I have to cook?</summary><p>Only one night. Each pair or small group cooks one favorite Italian dish for everyone. You pick your night and dish after you book. Other nights are light suppers or planned dinners.</p></details>
+      <details><summary>What if I have food allergies?</summary><p>Just tell Ronda after you book. She will share your needs with the group and the cooks.</p></details>
+      <details><summary>When do I pay?</summary><p>Book by the first week of January 2027. Your final payment is due March 31, 2027. Ronda will go over the details on your call.</p></details>
+      <details><summary>Who plans this trip?</summary><p>The Unmapped plans it with Travelive, a luxury travel partner in Italy. Ronda Walker hosts the trip in person from start to finish.</p></details>
+      <details><summary>How many people can go?</summary><p>Only 10. Spots go in the order people book.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="narrow stack center">
+    <span class="eyebrow">May 22–29, 2027 &nbsp;·&nbsp; From $4,500 per person</span>
+    <h2 class="h2">Save your spot in Tuscany</h2>
+    <p class="lead">Only 10 people can go. Ask all your questions on a free call, then decide. No pressure.</p>
+    <div style="margin-top:10px"><a class="btn" href="#inquire">Ask about this trip &rarr;</a></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <a class="mark" href="https://theunmapped.net/">The <span>Unmapped</span></a>
+  <div>Call or text Ronda: <a href="tel:+14256506525">425-650-6525</a> &nbsp;·&nbsp; Ronda.Walker@theunmapped.net</div>
+  <p class="fine">The Unmapped plans and books this trip with Travelive, our luxury travel partner in Italy. Prices are per person and based on 10 guests sharing the villa. Flights are not included.</p>
+  <p class="fine">&copy; 2026 The Unmapped · Collecting experiences, not just destinations</p>
+</footer>
+
+<script>
+(function(){
+  var target = new Date("2027-05-22T09:00:00+02:00").getTime();
+  var el = {d:document.getElementById("cd-d"),h:document.getElementById("cd-h"),m:document.getElementById("cd-m"),s:document.getElementById("cd-s")};
+  if(!el.d) return;
+  function pad(n){return n<10?"0"+n:""+n}
+  function tick(){
+    var t = Math.max(0, target - Date.now());
+    el.d.textContent = Math.floor(t/864e5);
+    el.h.textContent = pad(Math.floor(t/36e5)%24);
+    el.m.textContent = pad(Math.floor(t/6e4)%60);
+    el.s.textContent = pad(Math.floor(t/1e3)%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
+
+</body>
+</html>
